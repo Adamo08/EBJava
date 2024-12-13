@@ -9,7 +9,7 @@ EBJava is a Java-based application built with JavaFX and Maven, designed to mana
 - **Data Validation**: Ensures that the email format and phone number follow proper patterns before adding members.
 
 ## Technologies Used
-- **Java** (JDK 17)
+- **Java**
 - **Maven** for dependency management
 - **JavaFX** for the user interface
 - **SQLite** for database management
