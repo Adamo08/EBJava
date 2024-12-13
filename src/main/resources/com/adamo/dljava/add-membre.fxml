@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml" fx:controller="com.adamo.dljava.controller.ajoutMembreController" spacing="15" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: #f4f4f9; -fx-border-radius: 10; -fx-border-color: #ccc; -fx-border-width: 2;">
+    <!-- Title Section -->
+    <Label text="Add New Member" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+    <!-- Input Fields -->
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <Label text="Nom:" style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+        <TextField fx:id="nomField" promptText="Enter last name" style="-fx-pref-width: 250px; -fx-border-radius: 5px; -fx-border-color: #888;" />
+    </HBox>
+
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <Label text="Prenom:" style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+        <TextField fx:id="prenomField" promptText="Enter first name" style="-fx-pref-width: 250px; -fx-border-radius: 5px; -fx-border-color: #888;" />
+    </HBox>
+
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <Label text="Email:" style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+        <TextField fx:id="emailField" promptText="Enter email" style="-fx-pref-width: 250px; -fx-border-radius: 5px; -fx-border-color: #888;" />
+    </HBox>
+
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <Label text="Phone:" style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+        <TextField fx:id="phoneField" promptText="Enter phone number" style="-fx-pref-width: 250px; -fx-border-radius: 5px; -fx-border-color: #888;" />
+    </HBox>
+
+    <!-- Add Member Button -->
+    <Button fx:id="addButton" text="Add Member" onAction="#handleAddButton" style="-fx-padding: 10; -fx-font-size: 16px; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 5px; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 10 , 0 , 0 , 3 );" />
+
+    <!-- New Button to show CSV Members -->
+    <Button fx:id="showCsvButton" text="Show CSV Members" onAction="#handleShowCsvMembers" style="-fx-padding: 10; -fx-font-size: 16px; -fx-background-color: #2196F3; -fx-text-fill: white; -fx-border-radius: 5px; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 10 , 0 , 0 , 3 );" />
+
+    <!-- TableView to display CSV members -->
+    <TableView fx:id="tableView" visible="false" prefHeight="200" prefWidth="300">
+        <columns>
+            <TableColumn fx:id="nomColumn" text="Nom" />
+            <TableColumn fx:id="prenomColumn" text="Prenom" />
+            <TableColumn fx:id="emailColumn" text="Email" />
+            <TableColumn fx:id="phoneColumn" text="Phone" />
+        </columns>
+    </TableView>
+
+</VBox>
